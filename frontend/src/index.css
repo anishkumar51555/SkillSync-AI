@@ -1,0 +1,231 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b1020;
+  color: #f8fafc;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  border-bottom: 1px solid #273149;
+  gap: 16px;
+}
+
+.navbar h2 {
+  color: #9baaff;
+}
+
+.navbar span,
+.description,
+.note {
+  color: #aab4cc;
+}
+
+.hero {
+  max-width: 850px;
+  margin: 65px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.tag {
+  color: #9baaff;
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+
+.hero h1 {
+  font-size: clamp(34px, 6vw, 58px);
+  line-height: 1.2;
+}
+
+.hero h1 span {
+  color: #9baaff;
+}
+
+.description {
+  max-width: 600px;
+  margin: 20px auto 32px;
+  line-height: 1.7;
+}
+
+.upload-card,
+.results {
+  background: #141c30;
+  border: 1px solid #303b56;
+  border-radius: 16px;
+  padding: 26px;
+  text-align: left;
+  margin-top: 24px;
+}
+
+.upload-card label {
+  display: block;
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+input[type="file"] {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: #0b1020;
+  border: 1px solid #36415b;
+  border-radius: 8px;
+  color: white;
+}
+
+.file-name,
+.note {
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+button {
+  width: 100%;
+  margin-top: 18px;
+  padding: 14px;
+  border: none;
+  border-radius: 9px;
+  background: #9baaff;
+  color: #0b1020;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.error {
+  color: #ff9292;
+  margin-top: 20px;
+}
+
+.results {
+  margin-top: 28px;
+}
+
+.score-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0b1020;
+  padding: 18px;
+  border-radius: 10px;
+}
+
+.score-card strong {
+  font-size: 32px;
+  color: #9baaff;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill,
+.missing-skill {
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.skill {
+  background: #1b443d;
+  color: #a7f3d0;
+}
+
+.missing-skill {
+  background: #352b43;
+  color: #e9d5ff;
+}
+
+.results h3 {
+  margin-top: 26px;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 16px 5%;
+    flex-direction: column;
+  }
+
+  .hero {
+    margin: 35px auto;
+  }
+
+  .upload-card,
+  .results {
+    padding: 18px;
+  }
+}
+
+
+.job-input {
+  margin-top: 24px;
+  text-align: left;
+}
+
+.job-input label {
+  display: block;
+  margin: 18px 0 10px;
+  font-weight: bold;
+}
+
+.job-input select,
+.job-input textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #36415b;
+  border-radius: 8px;
+  background: #0b1020;
+  color: #f8fafc;
+  font: inherit;
+}
+
+.job-input textarea {
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.job-input select:focus,
+.job-input textarea:focus {
+  outline: 2px solid #9baaff;
+  outline-offset: 2px;
+}
+
+.job-results {
+  margin-top: 28px;
+  padding: 24px;
+  border: 1px solid #303b56;
+  border-radius: 16px;
+  background: #141c30;
+  text-align: left;
+}
+
+.job-results h3 {
+  margin-top: 24px;
+}
+
+.job-results .score-card {
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .job-results {
+    padding: 18px;
+  }
+}
